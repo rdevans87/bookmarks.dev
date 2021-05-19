@@ -20,7 +20,7 @@
               <i class="fa fa-lg fa-plus"></i>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-save-bookmark">
-              <a class="dropdown-item" routerLink="/personal/new"><i class="fa fa-bookmark"></i> Bookmark</a>
+              <a class="dropdown-item" routerLink="/my-bookmarks/new"><i class="fa fa-bookmark"></i> Bookmark</a>
               <a class="dropdown-item" routerLink="/my-snippets/new"><i class="fa fa-code"></i> Code snippet</a>
             </div>
           </div>
@@ -79,7 +79,7 @@
                         </li>
                         <li>
                           <app-add-bookmark-bookmarklet [withWindowDialog]="false"></app-add-bookmark-bookmarklet>
-                          - when clicked it redirects you to the <a href="https://www.codever.land/personal/new">New
+                          - when clicked it redirects you to the <a href="https://www.codever.land/my-bookmarks/new">New
                           Bookmark</a> form.
                           Once added you go back to the initial page [<em>recommended for <strong>phones</strong> or
                           smaller

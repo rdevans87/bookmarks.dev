@@ -93,7 +93,7 @@
           <h6 class="dropdown-header">Bookmarklets <i class="fas fa-bookmark"></i></h6>
           <a
             style="cursor: move"
-            href="javascript:(function(){let l=location.href;if(document.getSelection){d=document.getSelection()}else{d=''};let t=document.title;let w,h;if(innerWidth>1400){w=930}else{w=(innerWidth*65)/100}if(innerHeight>1400){h=1150}else{h=(innerHeight*90)/100};let features=`toolbar=no,width=${w},height=${h},top=${innerHeight-h},left=${innerWidth - w}`;open('https://www.codever.land/personal/new?url='+encodeURIComponent(l)+'&desc='+encodeURIComponent(d)+'&title='+encodeURIComponent(t)+'&popup=true','Codever',features);})();"
+            href="javascript:(function(){let l=location.href;if(document.getSelection){d=document.getSelection()}else{d=''};let t=document.title;let w,h;if(innerWidth>1400){w=930}else{w=(innerWidth*65)/100}if(innerHeight>1400){h=1150}else{h=(innerHeight*90)/100};let features=`toolbar=no,width=${w},height=${h},top=${innerHeight-h},left=${innerWidth - w}`;open('https://www.codever.land/my-bookmarks/new?url='+encodeURIComponent(l)+'&desc='+encodeURIComponent(d)+'&title='+encodeURIComponent(t)+'&popup=true','Codever',features);})();"
             target="_blank"
             title="Drag to browser toolbar"
             class="dropdown-item">
@@ -141,7 +141,7 @@
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown-new">
           <a
             class="dropdown-item"
-            routerLink="/personal/new">
+            routerLink="/my-bookmarks/new">
             <i class="fa fa-bookmark"></i>
             Bookmark
           </a>

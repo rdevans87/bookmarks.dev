@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
   <a class="navbar-brand" [routerLink]="['']" routerLinkActive="active">
     <div class="app-brand ml-2" (click)="onLogoClick()">
-      <div title="Bookmarks.dev">
+      <div title="Codever">
         <img src="assets/logo/logo-codever-full-black-white-inverted.svg" width="45" height="45" class="d-inline-block align-middle logo-image"
-             alt="Logo Bookmarks.dev">
+             alt="Logo Codever">
       </div>
     </div>
 
@@ -93,14 +93,14 @@
           <h6 class="dropdown-header">Bookmarklets <i class="fas fa-bookmark"></i></h6>
           <a
             style="cursor: move"
-            href="javascript:(function(){let l=location.href;if(document.getSelection){d=document.getSelection()}else{d=''};let t=document.title;let w,h;if(innerWidth>1400){w=930}else{w=(innerWidth*65)/100}if(innerHeight>1400){h=1150}else{h=(innerHeight*90)/100};let features=`toolbar=no,width=${w},height=${h},top=${innerHeight-h},left=${innerWidth - w}`;open('https://www.bookmarks.dev/personal/new?url='+encodeURIComponent(l)+'&desc='+encodeURIComponent(d)+'&title='+encodeURIComponent(t)+'&popup=true','Bookmarks.dev',features);})();"
+            href="javascript:(function(){let l=location.href;if(document.getSelection){d=document.getSelection()}else{d=''};let t=document.title;let w,h;if(innerWidth>1400){w=930}else{w=(innerWidth*65)/100}if(innerHeight>1400){h=1150}else{h=(innerHeight*90)/100};let features=`toolbar=no,width=${w},height=${h},top=${innerHeight-h},left=${innerWidth - w}`;open('https://www.bookmarks.dev/personal/new?url='+encodeURIComponent(l)+'&desc='+encodeURIComponent(d)+'&title='+encodeURIComponent(t)+'&popup=true','Codever',features);})();"
             target="_blank"
             title="Drag to browser toolbar"
             class="dropdown-item">
             +Bookmark <i class="fas fa-arrows-alt  right-font-icon"></i>
           </a>
           <a
-            href="javascript:(function(){let l=location.href;if(document.getSelection){d=document.getSelection()}else{d=''}let t=document.title;let w,h;if(innerWidth>1400){w=930}else{w=(innerWidth*65)/100}if(innerHeight>1400){h=1150}else{h=(innerHeight*90)/100};let features=`toolbar=no,width=${w},height=${h},top=${innerHeight-h},left=${innerWidth - w}`;open('https://www.bookmarks.dev/my-snippets/new?sourceUrl='+encodeURIComponent(l)+'&code='+encodeURIComponent(d)+'&title='+encodeURIComponent(t)+'&popup=true','Bookmarks.dev',features);})();"
+            href="javascript:(function(){let l=location.href;if(document.getSelection){d=document.getSelection()}else{d=''}let t=document.title;let w,h;if(innerWidth>1400){w=930}else{w=(innerWidth*65)/100}if(innerHeight>1400){h=1150}else{h=(innerHeight*90)/100};let features=`toolbar=no,width=${w},height=${h},top=${innerHeight-h},left=${innerWidth - w}`;open('https://www.bookmarks.dev/my-snippets/new?sourceUrl='+encodeURIComponent(l)+'&code='+encodeURIComponent(d)+'&title='+encodeURIComponent(t)+'&popup=true','Codever',features);})();"
             target="_blank"
             title="Drag to browser toolbar"
             style="cursor: move"
@@ -114,7 +114,7 @@
             target="_blank"
             title="Chrome Extension URL"
             class="dropdown-item">
-            Save link to Bookmarks.dev
+            Save link to Codever
             <sup class="external-link-hint">
               <i class="fas fa-external-link-alt" style="font-size: smaller"></i>
             </sup>
@@ -124,7 +124,7 @@
             target="_blank"
             title="Chrome Extension URL"
             class="dropdown-item">
-            Save code to Bookmarks.dev
+            Save code to Codever
             <sup class="external-link-hint">
               <i class="fas fa-external-link-alt" style="font-size: smaller"></i>
             </sup>

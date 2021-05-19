@@ -16,7 +16,7 @@ import { LoginRequiredDialogComponent } from './shared/dialog/login-required-dia
 })
 export class AppComponent implements OnInit {
 
-  url = 'https://www.bookmarks.dev';
+  url = 'https://www.codever.land';
   innerWidth: any;
 
   userIsLoggedIn = false;

@@ -20,6 +20,7 @@ import { TagFollowingBaseComponent } from '../../shared/tag-following-base-compo
 import { FeedStore } from '../../core/user/feed-store.service';
 import { SearchDomain } from '../../core/model/search-domain.enum';
 import { MatTabChangeEvent } from '@angular/material/tabs';
+import { CookieService } from '../../core/cookies/cookie.service';
 
 
 @Component({
@@ -56,6 +57,8 @@ export class HomepageComponent extends TagFollowingBaseComponent implements OnIn
   callerPaginationPinned = 'pinned';
   callerPaginationReadLater = 'read-later';
 
+  showAcknowledgeMigrationHeader = false;
+
   constructor(private appService: AppService,
               private publicBookmarksStore: PublicBookmarksStore,
               private router: Router,
@@ -70,11 +73,17 @@ export class HomepageComponent extends TagFollowingBaseComponent implements OnIn
               public loginDialog: MatDialog,
               private userInfoStore: UserInfoStore,
               private paginationNotificationService: PaginationNotificationService,
+              private cookieService: CookieService
   ) {
     super(loginDialog, userDataWatchedTagsStore);
   }
 
   ngOnInit(): void {
+    const acknowledgedCodeverMigration = this.cookieService.readCookie('acknowledge-codever-migration');
+    if (acknowledgedCodeverMigration !== 'true') {
+      this.showAcknowledgeMigrationHeader = true;
+    }
+
     const tabQueryParam = this.route.snapshot.queryParamMap.get('tab');
     const page = this.route.snapshot.queryParamMap.get('page');
     this.userIsLoggedIn$ = this.keycloakService.isLoggedIn();
@@ -252,6 +261,10 @@ export class HomepageComponent extends TagFollowingBaseComponent implements OnIn
       });
   }
 
+  public acknowledgeCodeverRebranding() {
+    this.cookieService.createCookie('acknowledge-codever-migration', 'true', 365);
+    this.showAcknowledgeMigrationHeader = false;
+  }
 }
 
 export interface TabSwitchQueryParams {

@@ -1,3 +1,16 @@
+<div *ngIf="showAcknowledgeMigrationHeader" class="alert alert-warning header-notification-wrapper">
+  <div>
+    <i class="fas fa-exclamation-circle fa-lg mr-1"></i> <b>Bookmarks.dev</b> has rebranded to <b>Codever</b>
+  </div>
+  <div>
+    <button type="button" class="ml-2 btn btn-primary btn-sm mr-2" (click)="acknowledgeCodeverRebranding()">
+      Cool <i class="fas fa-thumbs-up"></i>
+    </button>
+    <button type="button" class="ml-2 btn btn-primary btn-sm mr-2" (click)="acknowledgeCodeverRebranding()">
+      Ook <i class="fas fa-check-circle"></i>
+    </button>
+  </div>
+</div>
 <div id="public-search-box">
   <mat-tab-group [selectedIndex]="selectedTabIndex"
                  (selectedTabChange)="tabSelectionChanged($event)">

@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: Bookmarks.dev API
+  title: Codever API
   description: API supporting the [www.codever.land](https://www.codever.land)
   contact:
     name: Adrian Matei

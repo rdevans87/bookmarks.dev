@@ -19,7 +19,7 @@ your bookmarks and code snippets. The following extensions will assist you along
 | [Extension](https://chrome.google.com/webstore/detail/save-code-to-bookmarksdev/mibimnflfgnaealndgnamblppebdngne) | [Extension](https://addons.mozilla.org/en-GB/firefox/addon/save-code-to-bookmarks-dev/) | [Bookmarklet](https://www.codever.land/howto/bookmarklets) | [Plugin](https://plugins.jetbrains.com/plugin/14456-save-to-bookmarks-dev) |
 
 **Chrome extension usage example**
- [![Save to Bookmarks.dev chrome extension usage](documentation/gif/save-youtube-video-to-bookmarks.dev.gif)](https://www.codever.land/howto)
+ [![Save to Codever chrome extension usage](documentation/gif/save-youtube-video-to-bookmarks.dev.gif)](https://www.codever.land/howto)
 
 *******************************************************************************************************************************
 > Worthy public bookmarks are published regularly on Github in a [separate repository](https://github.com/BookmarksDev/bookmarks).

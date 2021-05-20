@@ -23,6 +23,7 @@ import { MatTabChangeEvent } from '@angular/material/tabs';
 import { CookieService } from '../../core/cookies/cookie.service';
 import { Feedback } from '../../core/model/feedback';
 import { FeedbackService } from '../feedback/feedback.service';
+import iziToast, { IziToastSettings } from 'izitoast';
 
 
 @Component({
@@ -267,6 +268,13 @@ export class HomepageComponent extends TagFollowingBaseComponent implements OnIn
   public acknowledgeCodeverRebranding(response: string) {
     this.cookieService.createCookie('acknowledge-codever-migration', 'true', 365);
     this.showAcknowledgeMigrationHeader = false;
+
+    const iziToastSettings: IziToastSettings = {
+      title: 'Thank you for your feedback',
+      timeout: 3000,
+      position: 'topRight'
+    }
+    iziToast.success(iziToastSettings);
 
     const feedback: Feedback = {
       question: 'Bookmarks.dev rebranding to Codever',

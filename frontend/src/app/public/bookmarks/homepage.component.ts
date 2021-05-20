@@ -21,6 +21,8 @@ import { FeedStore } from '../../core/user/feed-store.service';
 import { SearchDomain } from '../../core/model/search-domain.enum';
 import { MatTabChangeEvent } from '@angular/material/tabs';
 import { CookieService } from '../../core/cookies/cookie.service';
+import { Feedback } from '../../core/model/feedback';
+import { FeedbackService } from '../feedback/feedback.service';
 
 
 @Component({
@@ -73,7 +75,8 @@ export class HomepageComponent extends TagFollowingBaseComponent implements OnIn
               public loginDialog: MatDialog,
               private userInfoStore: UserInfoStore,
               private paginationNotificationService: PaginationNotificationService,
-              private cookieService: CookieService
+              private cookieService: CookieService,
+              private feedbackService: FeedbackService
   ) {
     super(loginDialog, userDataWatchedTagsStore);
   }
@@ -261,9 +264,18 @@ export class HomepageComponent extends TagFollowingBaseComponent implements OnIn
       });
   }
 
-  public acknowledgeCodeverRebranding() {
+  public acknowledgeCodeverRebranding(response: string) {
     this.cookieService.createCookie('acknowledge-codever-migration', 'true', 365);
     this.showAcknowledgeMigrationHeader = false;
+
+    const feedback: Feedback = {
+      question: 'Bookmarks.dev rebranding to Codever',
+      userResponse: response,
+      userId: this.userId ? this.userId : null,
+      userAgent: navigator.userAgent
+    }
+
+    this.feedbackService.createBookmark(feedback).subscribe();
   }
 }
 
